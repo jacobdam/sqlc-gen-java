@@ -34,7 +34,7 @@ func PostgresTypeToJavaType(identifier *plugin.Identifier) (string, error) {
 		return "java.time.LocalDateTime", nil
 	case "pg_catalog.timestamptz", "timestamptz":
 		return "java.time.OffsetDateTime", nil
-	case "text", "pg_catalog.varchar", "pg_catalog.bpchar", "string":
+	case "text", "pg_catalog.varchar", "pg_catalog.bpchar", "string", "name":
 		return "String", nil
 	case "uuid":
 		return "java.util.UUID", nil
