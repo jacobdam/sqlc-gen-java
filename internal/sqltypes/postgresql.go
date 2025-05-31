@@ -10,7 +10,7 @@ func PostgresTypeToJavaType(identifier *plugin.Identifier) (string, error) {
 	colType := sdk.DataType(identifier)
 
 	switch colType {
-	case "serial", "pg_catalog.serial4", "integer", "int", "int4", "pg_catalog.int4":
+	case "serial", "pg_catalog.serial4", "integer", "int", "int4", "pg_catalog.int4", "oid":
 		return "Integer", nil
 	case "bigserial", "pg_catalog.serial8", "bigint", "pg_catalog.int8":
 		return "Long", nil
